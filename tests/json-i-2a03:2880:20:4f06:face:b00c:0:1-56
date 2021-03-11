@@ -1,0 +1,12 @@
+{
+  "FULLADDRESS":"2a03:2880:0020:4f06:face:b00c:0000:0001",
+  "ADDRESS":"2a03:2880:20:4f06:face:b00c:0:1",
+  "FULLNETWORK":"2a03:2880:0020:4f00:0000:0000:0000:0000",
+  "NETWORK":"2a03:2880:20:4f00::",
+  "NETMASK":"ffff:ffff:ffff:ff00::",
+  "PREFIX":"56",
+  "ADDRSPACE":"Global Unicast",
+  "MINADDR":"2a03:2880:20:4f00::",
+  "MAXADDR":"2a03:2880:20:4fff:ffff:ffff:ffff:ffff",
+  "ADDRESSES":"4722366482869645213696"
+}

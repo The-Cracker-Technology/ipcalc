@@ -1,0 +1,5 @@
+ADDRESS=fd0b:a336:4e7d::
+NETMASK=ffff:ffff:ffff::
+PREFIX=48
+NETWORK=fd0b:a336:4e7d::
+ADDRSPACE="Unique Local Unicast"

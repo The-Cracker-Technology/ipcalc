@@ -1,0 +1,119 @@
+* Version 1.0.1 (unreleased)
+- The application will now build even without ronn
+
+
+* Version 1.0.0 (released 2020-10-03)
+- Manpage was converted to markdown
+
+
+* Version 0.4.1 (released 2020-04-24)
+- Fix identification of TEST-NET-1 and TEST-NET-2.
+- Updated IANA IPv4 special purpose address registry to the
+  2020-04-06 version.
+
+
+* Version 0.4.0 (released 2019-12-28)
+- Set the broadcast address according to RFC3021
+- Added the --deaggregate (-d) option. This allows identifying the networks
+  that cover a given IP range.
+
+
+* Version 0.3.0 (released 2019-11-23)
+- Added Meson build system; to build use:
+   $ meson setup build
+   $ ninja -C build
+   $ ninja -C build test
+- Extend --no-decorate support to work with the specific info output options.
+- Added the -a/--address info output option to explicitly print the address.
+- Do not display the address class information unless --all-info is given
+  on command line.
+- Fixed detection of IPv6 IETF Protocol Assignments address block
+- Fixed detection of IPv6 6to4 address block
+- Updated the IANA IPv6 Special-Purpose Address Registry support to
+  2019-09-13, which adds a few new IPv6 address blocks that can now be
+  detected by ipcalc.
+- Added the -j/--json output mode to print the info using the JSON format.
+
+
+* Version 0.2.5 (released 2019-02-18)
+- Fixed compilation with no geoinformation
+- Fixed segmentation fault when compiled with, but run without libmaxminddb.
+
+
+* Version 0.2.4 (released 2018-07-23)
+- Added support for libmaxmind DB API as an alternative to libgeoip.
+
+
+* Version 0.2.3 (released 2018-05-26)
+- Fixed --no-decorate option with --split and IPv6 addresses.
+- Fixed build with USE_GEOIP=yes and USE_DYN_GEOIP=no (David Guglielmi)
+- Fixed build with libgeoip < 1.6.3
+
+
+* Version 0.2.2 (released 2017-12-27)
+- Added a more silent version of --split when combined with
+  --no-decorate option.
+
+
+* Version 0.2.0 (released 2017-05-15)
+- Added the --split (-S) option. This allows splitting networks
+  into smaller chunks.
+
+
+* Version 0.1.8 (released 2016-06-14)
+- Do not print the reverse DNS information by default. Only
+  when --all-info is specified.
+
+
+* Version 0.1.7 (released 2016-04-01)
+- Assume a classless IPv4 range by default. This breaks compatibility
+  with previous versions since, unless --class-prefix is specified,
+  the default IPv4 prefix is now /32.
+- Added support for printing reverse DNS addresses.
+
+
+* Version 0.1.6 (released 2015-12-08)
+- Introduced color printing.
+
+
+* Version 0.1.5 (released 2015-11-05)
+- Auto-detect IPv6 addresses when generating random networks.
+- Removed libpopt dependency by using getopt_long().
+
+
+* Version 0.1.4 (released 2015-10-14)
+- Added the --all-info option to enable the printing of all
+  available information.
+
+
+* Version 0.1.3 (released 2015-10-05)
+- Print the country code in informational mode.
+
+
+* Version 0.1.2 (released 2015-06-09)
+- Print the country code when --geoinfo is requested.
+- Only quote the strings if there are spaces in them.
+
+
+* Version 0.1.1 (released 2015-05-19)
+- Allow a prefix of 0, or 0.0.0.0 to be compatible with previous
+  tool.
+
+
+* Version 0.1.0 (released 2015-05-18)
+- Added --random-private parameter to generate private networks.
+- IPv4 and IPv6 addresses are now automatically being detected,
+  and the --ipv4 or --ipv6 options are not mandatory to specify.
+- Added the --minaddr and --maxaddr options to print the minimum
+  and maximum addresses in the provided network.
+- Added the --addresses option to print the number of addresses
+  in the provided network.
+- Added the --addrspace option to print the type of the network
+  the address resides on.
+- Added the --geoinfo option to print geographic information about
+  the given IP address. That will work if libGeoIP is found on
+  the system.
+- By default, when no parameters are given, general information
+  about the provided network/address are printed (also as --info
+  option).
+
